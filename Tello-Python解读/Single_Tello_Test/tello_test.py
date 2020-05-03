@@ -5,7 +5,8 @@ import time
 
 start_time = str(datetime.now())
 
-file_name = sys.argv[1]#sys.argv[1]代表为python提供的第一个参数
+file_name = sys.argv[1]
+#sys.argv[1]代表为python提供的第一个参数
 
 f = open(file_name, "r")
 commands = f.readlines()
@@ -19,7 +20,7 @@ for command in commands:
         if command.find('delay') != -1:   #延迟
             sec = float(command.partition('delay')[2])
             #返回一个3元的元组，第一个为分隔符左边的子串，第二个为分隔符本身，第三个为分隔符右边的子串
-            print 'delay %s' % sec
+            print ('delay %s' % sec)
             time.sleep(sec)
             pass
         else:
